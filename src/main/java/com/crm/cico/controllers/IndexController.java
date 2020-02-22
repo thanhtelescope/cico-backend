@@ -16,8 +16,8 @@ public class IndexController {
 
     @RequestMapping({"", "/", "index"})
     public String getIndexPage(Model model) {
-        model.addAttribute("totalShopOwners", shopService.count());
-        model.addAttribute("totalShops", ownerService.count());
+        model.addAttribute("totalShopOwners", ownerService.count());
+        model.addAttribute("totalShops", shopService.count());
         return "index";
     }
 }
