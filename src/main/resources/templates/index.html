@@ -10,14 +10,14 @@
 <div class="tile_count">
     <div class="row x_content">
         <div class="col-md-6 col-sm-6  tile_stats_count">
-            <a href="/owners/index" th:href="/owners">
+            <a href="/owners/index" th:href="@{/owners}">
                 <span class="count_top"><i class="fa fa-user"></i> Total Shop Owners</span>
                 <div class="count green" th:text="${totalShopOwners}">2500</div>
             </a>
 
         </div>
         <div class="col-md-6 col-sm-6  tile_stats_count">
-            <a href="/shops/index" th:href="/shops">
+            <a href="/shops/index" th:href="@{/shops}">
                 <span class="count_top"><i class="fa fa-dollar"></i> Total Shops</span>
                 <div class="count green" th:text="${totalShops}">123</div>
             </a>
