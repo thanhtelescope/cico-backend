@@ -1,18 +1,17 @@
 package com.crm.cico.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import java.time.LocalDate;
+import javax.persistence.*;
+import java.util.Set;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 @Table(name = "shops")
 public class Shop extends BaseEntity {
@@ -50,9 +49,19 @@ public class Shop extends BaseEntity {
     @ManyToOne
     private Owner owner;
 
-    @Builder
-    public Shop(String name, String phone, String email, String address, String city, String state, String country, Double latitude, Double longitude, Owner owner) {
-
-
+    public Shop(String name, String phone, String email, String address, String city, String state, String zip, String country, Double latitude, Double longitude, Owner owner) {
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.owner = owner;
     }
+    @ManyToMany(mappedBy = "shops")
+    private Set<Manager> managers;
 }

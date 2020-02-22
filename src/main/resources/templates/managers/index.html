@@ -34,7 +34,7 @@
                                 </thead>
                                 <tbody>
                                     <tr th:each="manager : ${managers}">
-                                        <td th:text="${manager.profile.firstName + ' ' + manager.profile.lastName}"></td>
+                                        <td th:text="${manager.profile.getName()}"></td>
                                         <td th:text="${manager.profile.phone}"></td>
                                         <td th:text="${manager.profile.email}"></td>
                                         <td th:text="${manager.profile.birthday}"></td>

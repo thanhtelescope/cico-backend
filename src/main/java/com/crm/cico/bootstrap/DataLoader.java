@@ -623,22 +623,7 @@ public class DataLoader implements CommandLineRunner {
         Owner owner4 = new Owner(ownerProfile4);
         profileService.save(ownerProfile4);
         ownerService.save(owner4);
-        ownerProfile4 = new Profile("Vivian", "Harrell", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner4 = new Owner(ownerProfile4);
-        profileService.save(ownerProfile4);
-        ownerService.save(owner4);
-        ownerProfile4 = new Profile("Yuri", "Berry", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner4 = new Owner(ownerProfile4);
-        profileService.save(ownerProfile4);
-        ownerService.save(owner4);
-        ownerProfile4 = new Profile("Zenaida", "Frank", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner4 = new Owner(ownerProfile4);
-        profileService.save(ownerProfile4);
-        ownerService.save(owner4);
-        ownerProfile4 = new Profile("Zorita", "Serrano", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner4 = new Owner(ownerProfile4);
-        profileService.save(ownerProfile4);
-        ownerService.save(owner4);
+
 
 
         Shop shop = new Shop("1 Nail Salon", "(309)344-0162", "dvinci@webexpert.net", "1470 N Henderson St", "Galesburg", "IL", "17095", "US", 40.9508, -90.3832, owner);
@@ -722,6 +707,52 @@ public class DataLoader implements CommandLineRunner {
         shop = new Shop("Aracelys Hair Styles", "(713)681-7600", "slnangels@aol.com", "2106 Antoine Dr", "Houston", "TX", "48201", "US", 29.7972, -95.4933, owner);
         shopService.save(shop);
 
+
+        Profile managerProfile = new Profile("Bruno", "Nash", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        Manager manager = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager);
+        managerProfile = new Profile("Brielle", "Williamson", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager);
+        managerProfile = new Profile("Brenden", "Wagner", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager);
+        managerProfile = new Profile("Bradley", "Greer", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager);
+        managerProfile = new Profile("Ashton", "Cox", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager);
+        managerProfile = new Profile("Angelica", "Ramos", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager);
+        managerProfile = new Profile("Airi", "Satou", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        profileService.save(managerProfile);
+        manager = new Manager(managerProfile);
+        managerService.save(manager);
+
+        managerProfile = new Profile("Vivian", "Harrell", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        Manager manager1 = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager1);
+        managerProfile = new Profile("Yuri", "Berry", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager1 = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager1);
+        managerProfile = new Profile("Zenaida", "Frank", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager1 = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager1);
+        managerProfile = new Profile("Zorita", "Serrano", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
+        manager1 = new Manager(managerProfile);
+        profileService.save(managerProfile);
+        managerService.save(manager1);
 
     }
 }
