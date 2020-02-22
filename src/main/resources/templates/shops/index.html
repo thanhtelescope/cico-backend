@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Shops</title>
+</head>
+<body>
+<!--/*@thymesVar id="shop" type="com.crm.cico.model.Shop"*/-->
+
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List of Shops</h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+
+                            <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Owner</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Zip</th>
+                                    <th>Country</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="shop : ${shops}">
+                                        <td th:text="${shop.name}"></td>
+                                        <td th:text="${shop.owner.profile.getName()}"></td>
+                                        <td th:text="${shop.phone}"></td>
+                                        <td th:text="${shop.email}"></td>
+                                        <td th:text="${shop.address}"></td>
+                                        <td th:text="${shop.city}"></td>
+                                        <td th:text="${shop.state}"></td>
+                                        <td th:text="${shop.zip}"></td>
+                                        <td th:text="${shop.country}"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <title>CiCo CRM</title>
+</head>
+<body>
+<!-- top tiles -->
+
+<div class="tile_count">
+    <div class="row x_content">
+        <div class="col-md-6 col-sm-6  tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Total Shop Owners</span>
+            <div class="count green" th:text="${totalShopOwners}">2500</div>
+        </div>
+        <div class="col-md-6 col-sm-6  tile_stats_count">
+            <span class="count_top"><i class="fa fa-dollar"></i> Total Shops</span>
+            <div class="count green" th:text="${totalShops}">123</div>
+        </div>
+
+    </div>
+</div>
+<!-- /top tiles -->
+
+
+</body>
+</html>
