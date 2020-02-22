@@ -20,7 +20,7 @@ public class DataLoader implements CommandLineRunner {
     private final StaffService staffService;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         long countCustomers = customerService.count();
         if (countCustomers == 0) {
             loadData();
@@ -409,7 +409,7 @@ public class DataLoader implements CommandLineRunner {
 
         Profile ownerProfile = new Profile("Airi", "Satou", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
         profileService.save(ownerProfile);
-        Owner owner = Owner.builder().profile(ownerProfile).build();
+        Owner owner = new Owner(ownerProfile);
         ownerService.save(owner);
         ownerProfile = new Profile("Angelica", "Ramos", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
         owner = new Owner(ownerProfile);
