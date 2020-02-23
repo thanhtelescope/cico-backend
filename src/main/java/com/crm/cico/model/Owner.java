@@ -22,6 +22,10 @@ public class Owner extends BaseEntity {
     @OneToMany(mappedBy = "owner")
     private Set<Shop> shops = new HashSet<>();
 
+    @OneToMany(mappedBy = "owner")
+    private Set<Manager> managers = new HashSet<>();
+
+
     public Owner(Profile profile) {
         this.profile = profile;
     }

@@ -26,6 +26,9 @@ public class Manager extends BaseEntity {
             inverseJoinColumns = @JoinColumn(name = "manager_id"))
     private Set<Shop> shops = new HashSet<>();
 
+    @ManyToOne
+    private Owner owner;
+
     public Manager(Profile profile) {
         this.profile = profile;
     }
