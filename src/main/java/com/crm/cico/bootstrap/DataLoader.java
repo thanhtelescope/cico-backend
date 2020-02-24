@@ -735,32 +735,27 @@ public class DataLoader implements CommandLineRunner {
         managerProfile = new Profile("Ashton", "Cox", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         manager = new Manager(managerProfile);
         manager.setOwner(owner1);
-
         profileService.save(managerProfile);
-
         managerService.save(manager);
+
         managerProfile = new Profile("Angelica", "Ramos", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         manager = new Manager(managerProfile);
         manager.setOwner(owner1);
-
         profileService.save(managerProfile);
-
         managerService.save(manager);
+
         managerProfile = new Profile("Airi", "Satou", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
-        manager.setOwner(owner1);
-
-        profileService.save(managerProfile);
-
         manager = new Manager(managerProfile);
+        manager.setOwner(owner1);
+        profileService.save(managerProfile);
         managerService.save(manager);
 
         managerProfile = new Profile("Vivian", "Harrell", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         Manager manager1 = new Manager(managerProfile);
         manager1.setOwner(owner1);
-
         profileService.save(managerProfile);
-
         managerService.save(manager1);
+
         managerProfile = new Profile("Yuri", "Berry", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         manager1 = new Manager(managerProfile);
         manager1.setOwner(owner2);

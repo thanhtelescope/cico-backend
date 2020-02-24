@@ -30,6 +30,7 @@
                                     <th>City</th>
                                     <th>State</th>
                                     <th>Country</th>
+                                    <th>Owner</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -42,6 +43,7 @@
                                         <td th:text="${manager.profile.city}"></td>
                                         <td th:text="${manager.profile.state}"></td>
                                         <td th:text="${manager.profile.country}"></td>
+                                        <td th:text="${manager.owner?.profile?.getName()}"></td>
                                     </tr>
                                 </tbody>
                             </table>
