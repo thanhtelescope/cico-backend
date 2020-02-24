@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "staffs")
 public class Staff extends BaseEntity {
+
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "profile_id", referencedColumnName = "id")
     private Profile profile;
@@ -19,4 +20,8 @@ public class Staff extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner boss;
+
+    public Staff(Profile profile) {
+        this.profile = profile;
+    }
 }

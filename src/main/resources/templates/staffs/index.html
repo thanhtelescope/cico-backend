@@ -26,6 +26,7 @@
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Birthday</th>
+                                    <th>Boss</th>
                                     <th>Address</th>
                                     <th>City</th>
                                     <th>State</th>
@@ -38,6 +39,7 @@
                                         <td th:text="${staff.profile.phone}"></td>
                                         <td th:text="${staff.profile.email}"></td>
                                         <td th:text="${staff.profile.birthday}"></td>
+                                        <td th:text="${staff.boss?.profile.getName()}"></td>
                                         <td th:text="${staff.profile.address}"></td>
                                         <td th:text="${staff.profile.city}"></td>
                                         <td th:text="${staff.profile.state}"></td>
