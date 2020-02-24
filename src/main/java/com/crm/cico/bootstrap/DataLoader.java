@@ -411,30 +411,7 @@ public class DataLoader implements CommandLineRunner {
         profileService.save(ownerProfile);
         Owner owner = new Owner(ownerProfile);
         ownerService.save(owner);
-        ownerProfile = new Profile("Angelica", "Ramos", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner = new Owner(ownerProfile);
-        profileService.save(ownerProfile);
-        ownerService.save(owner);
-        ownerProfile = new Profile("Ashton", "Cox", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner = new Owner(ownerProfile);
-        profileService.save(ownerProfile);
-        ownerService.save(owner);
-        ownerProfile = new Profile("Bradley", "Greer", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner = new Owner(ownerProfile);
-        profileService.save(ownerProfile);
-        ownerService.save(owner);
-        ownerProfile = new Profile("Brenden", "Wagner", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner = new Owner(ownerProfile);
-        profileService.save(ownerProfile);
-        ownerService.save(owner);
-        ownerProfile = new Profile("Brielle", "Williamson", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner = new Owner(ownerProfile);
-        profileService.save(ownerProfile);
-        ownerService.save(owner);
-        ownerProfile = new Profile("Bruno", "Nash", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner = new Owner(ownerProfile);
-        profileService.save(ownerProfile);
-        ownerService.save(owner);
+        
 
         Profile ownerProfile1 = new Profile("Caesar", "Vance", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
         Owner owner1 = new Owner(ownerProfile1);
@@ -535,38 +512,6 @@ public class DataLoader implements CommandLineRunner {
 
         Profile ownerProfile2 = new Profile("Jonas", "Alexander", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
         Owner owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Lael", "Greer", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Martena", "Mccray", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Michael", "Bruce", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Michael", "Silva", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Michelle", "House", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Olivia", "Liang", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Paul", "Byrd", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
-        profileService.save(ownerProfile2);
-        ownerService.save(owner2);
-        ownerProfile2 = new Profile("Prescott", "Bartlett", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.SHOP_OWNER);
-        owner2 = new Owner(ownerProfile2);
         profileService.save(ownerProfile2);
         ownerService.save(owner2);
 
@@ -759,24 +704,79 @@ public class DataLoader implements CommandLineRunner {
         managerProfile = new Profile("Yuri", "Berry", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         manager1 = new Manager(managerProfile);
         manager1.setOwner(owner2);
-
         profileService.save(managerProfile);
-
         managerService.save(manager1);
+        
         managerProfile = new Profile("Zenaida", "Frank", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         manager1 = new Manager(managerProfile);
         manager1.setOwner(owner2);
-
         profileService.save(managerProfile);
-
         managerService.save(manager1);
+
         managerProfile = new Profile("Zorita", "Serrano", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.MANAGER);
         manager1 = new Manager(managerProfile);
         manager1.setOwner(owner2);
-
         profileService.save(managerProfile);
-
         managerService.save(manager1);
+
+
+        Profile staffProfile = new Profile("Staff Angelica", "Ramos", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        Staff staff = new Staff(staffProfile);
+        profileService.save(staffProfile);
+        staffService.save(staff);
+        staffProfile = new Profile("Staff Ashton", "Cox", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff = new Staff(staffProfile);
+        profileService.save(staffProfile);
+        staffService.save(staff);
+        staffProfile = new Profile("Staff Bradley", "Greer", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff = new Staff(staffProfile);
+        profileService.save(staffProfile);
+        staffService.save(staff);
+        staffProfile = new Profile("Staff Brenden", "Wagner", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff = new Staff(staffProfile);
+        profileService.save(staffProfile);
+        staffService.save(staff);
+        staffProfile = new Profile("Staff Brielle", "Williamson", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff = new Staff(staffProfile);
+        profileService.save(staffProfile);
+        staffService.save(staff);
+        staffProfile = new Profile("Staff Bruno", "Nash", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff = new Staff(staffProfile);
+        profileService.save(staffProfile);
+        staffService.save(staff);
+
+        Profile staffProfile2 = new Profile("Staff Lael", "Greer", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        Staff staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Martena", "Mccray", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Michael", "Bruce", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Michael", "Silva", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Michelle", "House", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Olivia", "Liang", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Paul", "Byrd", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
+        staffProfile2 = new Profile("Staff Prescott", "Bartlett", "+84 774261234", "tiger@cico.com", LocalDate.parse("2008-11-28"), "28th Floor, 1325 6th Avenue", "Edinburgh", "Edinburgh", "US", AccountType.STAFF);
+        staff2 = new Staff(staffProfile2);
+        profileService.save(staffProfile2);
+        staffService.save(staff2);
 
     }
 }
