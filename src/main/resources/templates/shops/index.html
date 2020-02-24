@@ -24,6 +24,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Owner</th>
+                                    <th>Managers</th>
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Address</th>
@@ -37,6 +38,8 @@
                                     <tr th:each="shop : ${shops}">
                                         <td th:text="${shop.name}"></td>
                                         <td th:text="${shop.owner.profile.getName()}"></td>
+                                        <td><span class="p-1" th:each="manager : ${shop.managers}"
+                                                  th:text="${manager.profile.getName() + ', '}"/></td>
                                         <td th:text="${shop.phone}"></td>
                                         <td th:text="${shop.email}"></td>
                                         <td th:text="${shop.address}"></td>
