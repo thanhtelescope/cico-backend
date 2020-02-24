@@ -64,4 +64,7 @@ public class Shop extends BaseEntity {
     }
     @ManyToMany(mappedBy = "shops")
     private Set<Manager> managers;
+
+    @ManyToMany(mappedBy = "shops")
+    private Set<Staff> staffs;
 }
