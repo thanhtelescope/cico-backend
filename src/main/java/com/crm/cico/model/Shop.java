@@ -67,4 +67,7 @@ public class Shop extends BaseEntity {
 
     @ManyToMany(mappedBy = "shops")
     private Set<Staff> staffs;
+
+    @OneToMany(mappedBy = "shop")
+    private Set<ServiceProvider> services;
 }

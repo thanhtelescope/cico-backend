@@ -3,8 +3,7 @@ package com.crm.cico.model;
 import lombok.*;
 
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Getter
@@ -14,7 +13,10 @@ import javax.persistence.Table;
 @Builder
 @Entity
 @Table(name = "services")
-public class Service extends BaseEntity {
+public class ServiceProvider extends BaseEntity {
 
     private String name;
+
+    @ManyToOne
+    private Shop shop;
 }
