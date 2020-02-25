@@ -1,6 +1,6 @@
 package com.crm.cico.controllers;
 
-import com.crm.cico.services.ShopProviderService;
+import com.crm.cico.services.ServiceCategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @AllArgsConstructor
-@RequestMapping({"services"})
-public class ServiceProviderController {
+@RequestMapping({"service-categories"})
+public class ServiceCategoryController {
 
-    private final ShopProviderService shopProviderService;
+    private final ServiceCategoryService serviceCategoryService;
 
     @RequestMapping({"", "/", "index"})
     public String getIndexPage(Model model) {
-        model.addAttribute("services", shopProviderService.findAll());
-        return "services/index";
+        model.addAttribute("categories", serviceCategoryService.findAll());
+        return "service_categories/index";
     }
 }
