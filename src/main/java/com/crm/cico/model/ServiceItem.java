@@ -12,7 +12,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "services")
+@Table(name = "categories")
 public class ServiceItem extends BaseEntity {
 
     private String name;

@@ -18,6 +18,8 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final ManagerService managerService;
     private final StaffService staffService;
+    private final ServiceCategoryService categoryService;
+    private final ServiceItemService serviceItemService;
 
     @Override
     public void run(String... args) {
@@ -826,6 +828,40 @@ public class DataLoader implements CommandLineRunner {
         staff2.getShops().add(shop12);
         profileService.save(staffProfile2);
         staffService.save(staff2);
+
+        ServiceCategory serviceCat = new ServiceCategory("Nails and Fills");
+        ServiceItem serviceItem = new ServiceItem("Pedicures", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+        serviceItem = new ServiceItem("Acrylics", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+        serviceItem = new ServiceItem("Fills", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+        serviceItem = new ServiceItem("Silk/Fiberglass", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+        serviceItem = new ServiceItem("Gels", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+
+        categoryService.save(serviceCat);
+
+        serviceCat = new ServiceCategory("Others");
+        serviceItem = new ServiceItem("Conditioning Cuticle Oil", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+
+        serviceItem = new ServiceItem("Filers and buffers", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+
+        serviceItem = new ServiceItem("Nail Coatings", "");
+        serviceCat.getServices().add(serviceItem);
+        serviceItemService.save(serviceItem);
+
+        categoryService.save(serviceCat);
 
     }
 }

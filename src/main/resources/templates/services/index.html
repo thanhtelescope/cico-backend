@@ -6,6 +6,7 @@
 </head>
 <body>
 <!--/*@thymesVar id="service" type="com.crm.cico.model.ServiceItem"*/-->
+<!--/*@thymesVar id="service" type="com.crm.cico.model.ServiceCategory"*/-->
 
     <div class="col-md-12 col-sm-12 ">
         <div class="x_panel">
@@ -17,22 +18,21 @@
             <div class="x_content">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card-box table-responsive">
+                        <div class="panel-group" id="accordion" th:each="cat, iter: ${categories}">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" th:href="'#collapse' + ${iter.index}" th:text="${cat.name}">
+                                            Collapsible Group 1</a>
+                                    </div>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse"th:id="'collapse' + ${iter.index}">
+                                    <ul class="list-group">
+                                        <li class="list-group-item" th:each="item: ${cat.services}" th:text="${item.name}">One</li>
 
-                            <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <tr th:each="service : ${services}">
-                                        <td th:text="${service.name}"></td>
-                                        <td th:text="${service.shop?.name}"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
