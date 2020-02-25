@@ -28,8 +28,10 @@
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse"th:id="'collapse' + ${iter.index}">
                                     <ul class="list-group">
-                                        <li class="list-group-item" th:each="item: ${cat.services}" th:text="${item.name}">One</li>
-
+                                        <li class="list-group-item" th:each="item: ${cat.services}">
+                                            <p th:text="${item.name}">One </p>
+                                            <div class="font-italic" th:text="${item.description}">One </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

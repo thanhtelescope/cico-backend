@@ -830,34 +830,34 @@ public class DataLoader implements CommandLineRunner {
         staffService.save(staff2);
 
         ServiceCategory serviceCat = new ServiceCategory("Nails and Fills");
-        ServiceItem serviceItem = new ServiceItem("Pedicures", "");
+        ServiceItem serviceItem = new ServiceItem("Pedicures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Acrylics", "");
+        serviceItem = new ServiceItem("Acrylics", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Fills", "");
+        serviceItem = new ServiceItem("Fills", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Silk/Fiberglass", "");
+        serviceItem = new ServiceItem("Silk/Fiberglass", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Gels", "");
+        serviceItem = new ServiceItem("Gels", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
 
         categoryService.save(serviceCat);
 
         serviceCat = new ServiceCategory("Others");
-        serviceItem = new ServiceItem("Conditioning Cuticle Oil", "");
+        serviceItem = new ServiceItem("Conditioning Cuticle Oil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
 
-        serviceItem = new ServiceItem("Filers and buffers", "");
+        serviceItem = new ServiceItem("Filers and buffers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
 
-        serviceItem = new ServiceItem("Nail Coatings", "");
+        serviceItem = new ServiceItem("Nail Coatings", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
         serviceCat.getServices().add(serviceItem);
         serviceItemService.save(serviceItem);
 
