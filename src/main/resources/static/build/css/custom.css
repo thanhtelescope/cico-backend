@@ -4968,3 +4968,9 @@ ul.notifications {
 
 .calendar-exibit .calendar-table {
   padding: 0 0 4px 0; }
+
+div.panel-title {
+  font-size: 15px;
+  padding: 1px 5px 6px;
+  margin-top: 10px;
+}
