@@ -18,8 +18,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final ManagerService managerService;
     private final StaffService staffService;
-    private final ServiceCategoryService categoryService;
-    private final ServiceItemService serviceItemService;
+    private final MenuService menuService;
+    private final MenuItemGroupService menuItemGroupService;
+    private final MenuItemService menuItemService;
 
     @Override
     public void run(String... args) {
@@ -829,39 +830,44 @@ public class DataLoader implements CommandLineRunner {
         profileService.save(staffProfile2);
         staffService.save(staff2);
 
-        ServiceCategory serviceCat = new ServiceCategory("Nails and Fills");
-        ServiceItem serviceItem = new ServiceItem("Pedicures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Acrylics", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Fills", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Silk/Fiberglass", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
-        serviceItem = new ServiceItem("Gels", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
+        Menu menu = new Menu("Nail Care Salon");
+        menu.setShop(shop);
+        MenuItemGroup menuItemGroup = new MenuItemGroup("Nails and Fills");
 
-        categoryService.save(serviceCat);
+        MenuItem menuItem = new MenuItem("Pedicures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Acrylics", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Fills", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Silk/Fiberglass", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Gels", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
 
-        serviceCat = new ServiceCategory("Others");
-        serviceItem = new ServiceItem("Conditioning Cuticle Oil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
+        menuItemGroupService.save(menuItemGroup);
+        menuService.save(menu);
 
-        serviceItem = new ServiceItem("Filers and buffers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
+        menu = new Menu("Others");
+        menuItem = new MenuItem("Conditioning Cuticle Oil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
 
-        serviceItem = new ServiceItem("Nail Coatings", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        serviceCat.getServices().add(serviceItem);
-        serviceItemService.save(serviceItem);
+        menuItem = new MenuItem("Filers and buffers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
 
-        categoryService.save(serviceCat);
+        menuItem = new MenuItem("Nail Coatings", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItemGroup.getItems().add(menuItem);
+        menuItemService.save(menuItem);
+
+        menuItemGroupService.save(menuItemGroup);
+        menuService.save(menu);
 
     }
 }

@@ -69,8 +69,5 @@ public class Shop extends BaseEntity {
     private Set<Staff> staffs;
 
     @OneToMany(mappedBy = "shop")
-    private Set<ServiceItem> services;
-
-    @OneToMany(mappedBy = "shop")
-    private Set<ServiceCategory> serviceCategories;
+    private Set<Menu> menus;
 }
