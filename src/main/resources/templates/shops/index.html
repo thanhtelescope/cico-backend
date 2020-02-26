@@ -40,9 +40,9 @@
                                         <td th:text="${shop.name}"></td>
                                         <td th:text="${shop.owner.profile.getName()}"></td>
                                         <td><span class="p-1" th:each="manager : ${shop.managers}"
-                                                  th:text="${manager.profile.getName() + ', '}"/></td>
+                                                  th:text="${manager.profile.getName() + ', '}"></span></td>
                                         <td><span class="p-1" th:each="staff : ${shop.staffs}"
-                                                  th:text="${staff.profile.getName() + ', '}"/></td>
+                                                  th:text="${staff.profile.getName() + ', '}"></span></td>
                                         <td th:text="${shop.phone}"></td>
                                         <td th:text="${shop.email}"></td>
                                         <td th:text="${shop.address}"></td>
