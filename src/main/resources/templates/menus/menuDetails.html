@@ -5,10 +5,11 @@
     <title>Shops</title>
 </head>
 <body>
-<!--/*@thymesVar id="service" type="com.crm.cico.model.ServiceItem"*/-->
-<!--/*@thymesVar id="service" type="com.crm.cico.model.ServiceCategory"*/-->
+<!--/*@thymesVar id="menu" type="com.crm.cico.model.Menu"*/-->
+<!--/*@thymesVar id="menuItemGroup" type="com.crm.cico.model.MenuItemGroup"*/-->
+<!--/*@thymesVar id="menuItem" type="com.crm.cico.model.MenuItem"*/-->
 
-    <div class="col-md-12 col-sm-12 ">
+    <div class="col-md-12 col-sm-12">
         <div class="x_panel">
             <div class="x_title">
                 <h2>Menu Details</h2>
@@ -18,19 +19,19 @@
             <div class="x_content">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="panel-group" id="accordion" th:each="cat, iter: ${categories}">
+                        <div class="panel-group" id="accordion" th:each="menuItemGroup, iter: ${menu.menuItemGroups}">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" th:href="'#collapse' + ${iter.index}" th:text="${cat.name}">
+                                        <a data-toggle="collapse" data-parent="#accordion" th:href="'#collapse' + ${iter.index}" th:text="${menuItemGroup.name}">
                                             Collapsible Group 1</a>
                                     </div>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse"th:id="'collapse' + ${iter.index}">
+                                <div id="collapse1" class="panel-collapse collapse show"th:id="'collapse' + ${iter.index}">
                                     <ul class="list-group">
-                                        <li class="list-group-item" th:each="item: ${cat.services}">
-                                            <p th:text="${item.name}">One </p>
-                                            <div class="font-italic" th:text="${item.description}">One </div>
+                                        <li class="list-group-item" th:each="menuItem: ${menuItemGroup.items}">
+                                            <p th:text="${menuItem.name}">One </p>
+                                            <div class="font-italic" th:text="${menuItem.description}">One </div>
                                         </li>
                                     </ul>
                                 </div>

@@ -25,8 +25,8 @@ public class Menu extends BaseEntity {
     @ManyToOne
     private Shop shop;
 
-    @OneToMany
-    Set<MenuItemGroup> itemGroups = new HashSet<>();
+    @OneToMany(mappedBy = "menu")
+    private Set<MenuItemGroup> menuItemGroups = new HashSet<>();
 
     private Boolean isActive = false;
 

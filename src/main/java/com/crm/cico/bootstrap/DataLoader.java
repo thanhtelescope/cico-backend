@@ -832,42 +832,47 @@ public class DataLoader implements CommandLineRunner {
 
         Menu menu = new Menu("Nail Care Salon");
         menu.setShop(shop);
-        MenuItemGroup menuItemGroup = new MenuItemGroup("Nails and Fills");
-
-        MenuItem menuItem = new MenuItem("Pedicures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
-        menuItemService.save(menuItem);
-        menuItem = new MenuItem("Acrylics", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
-        menuItemService.save(menuItem);
-        menuItem = new MenuItem("Fills", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
-        menuItemService.save(menuItem);
-        menuItem = new MenuItem("Silk/Fiberglass", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
-        menuItemService.save(menuItem);
-        menuItem = new MenuItem("Gels", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
-        menuItemService.save(menuItem);
-
-        menuItemGroupService.save(menuItemGroup);
         menuService.save(menu);
 
-        menu = new Menu("Others");
+        MenuItemGroup menuItemGroup = new MenuItemGroup("Nails and Fills");
+        menuItemGroup.setMenu(menu);
+        menuItemGroupService.save(menuItemGroup);
+
+        MenuItem menuItem = new MenuItem("Pedicures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItem.setGroup(menuItemGroup);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Acrylics", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItem.setGroup(menuItemGroup);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Fills", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItem.setGroup(menuItemGroup);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Silk/Fiberglass", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItem.setGroup(menuItemGroup);
+        menuItemService.save(menuItem);
+        menuItem = new MenuItem("Gels", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
+        menuItem.setGroup(menuItemGroup);
+        menuItemService.save(menuItem);
+
+        menuItemGroup = new MenuItemGroup("Others");
+        menuItemGroup.setMenu(menu);
+        menuItemGroupService.save(menuItemGroup);
+
         menuItem = new MenuItem("Conditioning Cuticle Oil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
+        menuItem.setGroup(menuItemGroup);
         menuItemService.save(menuItem);
 
         menuItem = new MenuItem("Filers and buffers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
+        menuItem.setGroup(menuItemGroup);
         menuItemService.save(menuItem);
 
         menuItem = new MenuItem("Nail Coatings", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, nibh eget pharetra ornare, lacus sem pellentesque erat, a pretium dui massa commodo sapien. Maecenas ornare justo a ligula pellentesque");
-        menuItemGroup.getItems().add(menuItem);
+        menuItem.setGroup(menuItemGroup);
         menuItemService.save(menuItem);
 
+        menuItemGroup.setMenu(menu);
         menuItemGroupService.save(menuItemGroup);
-        menuService.save(menu);
+
 
     }
 }

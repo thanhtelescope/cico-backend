@@ -3,6 +3,7 @@ package com.crm.cico.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.HashSet;
@@ -21,6 +22,9 @@ public class MenuItemGroup extends BaseEntity {
 
     @OneToMany(mappedBy = "group")
     private Set<MenuItem> items = new HashSet<>();
+
+    @ManyToOne
+    private Menu menu;
 
     public MenuItemGroup(String name) {
         this.name = name;

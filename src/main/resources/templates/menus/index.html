@@ -28,7 +28,9 @@
                                 </thead>
                                 <tbody>
                                     <tr th:each="menu : ${menus}">
-                                        <td th:text="${menu.name}"></td>
+                                        <td>
+                                            <a th:href="@{/menus/__${menu.id}__}" th:text="${menu.name}"/></a>
+                                        </td>
                                         <td th:text="${menu.shop?.name}"></td>
                                     </tr>
                                 </tbody>
