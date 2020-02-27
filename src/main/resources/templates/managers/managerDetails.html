@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Shops</title>
+</head>
+<body>
+
+<div class="col-md-12 col-sm-12">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Manager Details</h3>
+            </div>
+        </div>
+        <div class="x_panel">
+            <div class="x_content">
+                <div class="col-md-6">
+                    <p class="lead">Profile
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th style="width:50%">First Name:</th>
+                                <td th:text="${manager.profile.firstName}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>Last Name:</th>
+                                <td th:text="${manager.profile.lastName}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>Phone:</th>
+                                <td th:text="${manager.profile.phone}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>Email:</th>
+                                <td th:text="${manager.profile.email}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>Birthday:</th>
+                                <td th:text="${manager.profile.birthday}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>Address:</th>
+                                <td th:text="${manager.profile.address}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>City:</th>
+                                <td th:text="${manager.profile.city}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>State:</th>
+                                <td th:text="${manager.profile.state}">Airi</td>
+                            </tr>
+                            <tr>
+                                <th>Country:</th>
+                                <td th:text="${manager.profile.country}">Airi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
