@@ -9,13 +9,14 @@
 <!--/*@thymesVar id="menuItemGroup" type="com.crm.cico.model.MenuItemGroup"*/-->
 <!--/*@thymesVar id="menuItem" type="com.crm.cico.model.MenuItem"*/-->
 
-    <div class="col-md-12 col-sm-12">
-        <div class="x_panel">
-            <div class="x_title">
-                <h2>Menu Details</h2>
-
-                <div class="clearfix"></div>
+<div class="col-md-12 col-sm-12">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Menu Details</h3>
             </div>
+        </div>
+        <div class="x_panel">
             <div class="x_content">
                 <div class="row">
                     <div class="col-sm-12">
@@ -23,15 +24,17 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" th:href="'#collapse' + ${iter.index}" th:text="${menuItemGroup.name}">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           th:href="'#collapse' + ${iter.index}" th:text="${menuItemGroup.name}">
                                             Collapsible Group 1</a>
                                     </div>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse show"th:id="'collapse' + ${iter.index}">
+                                <div id="collapse1" class="panel-collapse collapse show"
+                                     th:id="'collapse' + ${iter.index}">
                                     <ul class="list-group">
                                         <li class="list-group-item" th:each="menuItem: ${menuItemGroup.items}">
                                             <p th:text="${menuItem.name}">One </p>
-                                            <div class="font-italic" th:text="${menuItem.description}">One </div>
+                                            <div class="font-italic" th:text="${menuItem.description}">One</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -42,6 +45,7 @@
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>
